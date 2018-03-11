@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+
+  auth:
+    environment:
+      GITHUB_KEY: 8a5acd190980e7081b12
+      GITHUB_SECRET: e719a77c36716c817d54d94ea2fe11c79f44ecf0
+      PRIVATE_KEY: |+
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEpgIBAAKCAQEAnG8vii840SMTrvh6Q7BodfDna0215QS/9WcVhPirlcscAE7+
+        QwLtU7xd5iH74O4P1ggkKfsa0dsy3wflQ/N8J7CKzde9sHwLN1ApLSFiShFF9Qny
+        wHIz95TnZWHmCtWGDubim8dhP7sKl+SQMnVE5IOEx9A/pNTNcDatUN9VtFe5jN5E
+        n4D4XgSHCardKDvknsHUl3u86UmhU1FusnPEkLxl/FT3L7NFGHZ/Cbea0YS7iIUO
+        lC2R5D+nD4nKraqtBXIxq3uf2YOLdxNaYIqwROLfneIl+siaaJDle59XKLufajLC
+        2TTzEqmw5fw5XQ7mdprKJ6RnLEat6GHh0jgQxwIDAQABAoIBAQCWV8E/s/yN+oEr
+        UsDmlv7+AqXWmZvr27HE3upunjMBxm9F2KVCr+h45nrz9stFNGZh0/c1pY/0Cg+N
+        C+CKetJirqfoBqTWnZCF+3NnXUNCXfF2+7WiwN8y3Ze59umIlge+AKXfAzJydodK
+        za7L36pzV/bftkPEXYSHiPTu2YVbyMa1Z9QCWOJbHVdDYnCf9QPmfm6JxRj4e9+S
+        iHbsL3mXRsbni0un5t3xKjU9SG9tsA1FUpN1+2q2K96MRy3x6TZYR3+Wali4q/gx
+        K6u5N8EyTzO8zEtXrNPNsnlUs+xtCEXv+j9NEoNEyCdbiF43UDuxc+sOvCVqjeLl
+        cwRFUS1JAoGBAM9DhgQOMXLWGXBsGtmDZfVD7m9LwCISxqI5/T79wT3oVaGY97UQ
+        OBOqExvMoXWvWI/Leq12l1GgrLfOGlKJ5ksmVkGtVmo6QUTDlLUowFOXdVGqhw3z
+        jQwIlNJQ4k440JOq2OylJXyweF8F53eIUZR4Lf+jkZyHiDdKirkOEXu1AoGBAME3
+        7STVyPb9hlIaoZnikXMMoeDUiCZbNXVjquyUIqc2Ccmuzc1oOpbRq5EWebelAnYn
+        MlzBlp9EsHfVQszLPhdtzxM0GfArJYuJSS2HNk7uYnAhMdbKK+wbfUBc7vdd4A04
+        ysuJc45229TbnYgD7yiecb9lnyQM+MY5zFc98MALAoGBAJOWJnj+zlFSiXzXTesz
+        OMgEXmWcEC1zJ0RffKh9MzxtE4TlkwW4jeXaxo6WESbm/G4wW6PnfWrfuf2MYowB
+        rB45J1TPJGiyIMXhayPw57reb+j+P/s8QWSfO7HjbLJ8nHF6R8uC8YWvd5dace9Y
+        /5Z0WXTeuZI3pFSS3ONXVDW9AoGBAIplYqkFsCKpyXI5vRKaZJBBthlyYesHXa0t
+        rJo0KPYYEL6zRJoiVAT/PaJ4tMpDmRXEUaB60UZXTwcma+iAk4L4lmAs639JiGT/
+        +rhvpwi2Wy/xtt8ghIFj1z0o08m/JeKSkT9kvq6GmENI4vcvyjgP9W2gfnK2D+L8
+        N08uAKmtAoGBAKMUR9NIhhwgpasFpdxyiVwmsJHFFWGeDSX8DiOQ6e2m/JLprmOV
+        U3jAFJpqAXpmwMlWWPqQpIRY/h4ZZQmqm+/YaKxS+Vl1eLFBtIbFbZHlUyOzF+Im
+        V6nSzXLrxnibqT2bbS2XaGXJXmSDxMcoLTOZpYIny7YUAU79rcHdI/S+
+        -----END RSA PRIVATE KEY-----
+      PUBLIC_KEY: |+
+        -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnG8vii840SMTrvh6Q7Bo
+        dfDna0215QS/9WcVhPirlcscAE7+QwLtU7xd5iH74O4P1ggkKfsa0dsy3wflQ/N8
+        J7CKzde9sHwLN1ApLSFiShFF9QnywHIz95TnZWHmCtWGDubim8dhP7sKl+SQMnVE
+        5IOEx9A/pNTNcDatUN9VtFe5jN5En4D4XgSHCardKDvknsHUl3u86UmhU1FusnPE
+        kLxl/FT3L7NFGHZ/Cbea0YS7iIUOlC2R5D+nD4nKraqtBXIxq3uf2YOLdxNaYIqw
+        ROLfneIl+siaaJDle59XKLufajLC2TTzEqmw5fw5XQ7mdprKJ6RnLEat6GHh0jgQ
+        xwIDAQAB
+        -----END PUBLIC KEY-----

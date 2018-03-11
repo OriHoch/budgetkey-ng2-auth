@@ -55,14 +55,16 @@ Following commands generates the required keys and creates the `secret.env` file
 openssl genrsa -out secret.tmpkey 2048
 openssl rsa -in secret.tmpkey -out secret-private.pem -outform pem
 openssl rsa -in secret.tmpkey -out secret-public.pem -outform pem -pubout
-echo "PRIVATE_KEY=`echo $(cat secret-private.pem)`
-PUBLIC_KEY=`echo $(cat secret-public.pem)`
-GOOGLE_KEY=
+printf "PRIVATE_KEY="'"'"`echo "$(cat secret-private.pem)"`"'"'""
+echo
+printf "PUBLIC_KEY="'"'"`echo "$(cat secret-public.pem)"`"'"'""
+echo
+echo "GOOGLE_KEY=
 GOOGLE_SECRET=
 GITHUB_KEY=
 GITHUB_SECRET=
 DATABASE_URL=postgresql://postgres:123456@db:5432/postgres
-EXTERNAL_ADDRESS=" > secret.env
+EXTERNAL_ADDRESS=" >> secret.env
 rm secret.tmpkey secret-private.pem secret-public.pem
 ```
 

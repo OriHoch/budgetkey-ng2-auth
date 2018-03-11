@@ -19,7 +19,9 @@ export function getAuthServiceConfigProvider(authServerUrl:string, jwtLocalStora
 
 @Injectable()
 export class AuthService {
-    private authServerUrl: string;
+    public authServerUrl: string;
+    public user: any;
+
     private jwtLocalStorageKey: string;
     private jwtQueryParam: string;
 
@@ -71,17 +73,25 @@ export class AuthService {
             this.http
                 .get(this.authServerUrl + '/auth/check?jwt=' + (jwt ? jwt : '') + '&next=' + encodeURIComponent(next))
                 .map(res => res.json())
-                .subscribe(res => resolve(res));
+                .subscribe(res => {
+                    if (res && res.authenticated) {
+                        res.jwt = (jwt ? jwt : '');
+                        this.user = res;
+                    }
+                    resolve(res);
+                });
         });
     }
 
     logout(): void {
+        this.user = null;
         this.deleteToken();
         let search = document.location.search.trim();
         if (search.startsWith('?')) search = search.substring(1);
         let params = new URLSearchParams(search);
         if (params.has(this.jwtQueryParam)) params.delete(this.jwtQueryParam);
         document.location.search = params.toString();
+        // document.location.search = decodeURIComponent(params.toString());
     }
 
 }

@@ -4,6 +4,8 @@ services:
 
   db:
     image: postgres:alpine
+    ports:
+    - "5432:5432"
     environment:
     - POSTGRES_PASSWORD=123456
 
@@ -11,8 +13,9 @@ services:
     depends_on:
     - db
     image: budgetkey/auth
-    env_file:
-    - secret.env
+    environment:
+      DATABASE_URL: postgresql://postgres:123456@db:5432/postgres
+      EXTERNAL_ADDRESS: localhost:8001
 
   traefik:
     image: traefik
